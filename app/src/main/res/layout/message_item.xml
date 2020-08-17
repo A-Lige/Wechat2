@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/touxiang"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/ic_tx1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/contacts_id"
+        android:layout_width="235dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:ellipsize="end"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
+        android:singleLine="true"
+        android:text="订阅号消息"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/touxiang"
+        app:layout_constraintTop_toTopOf="@+id/touxiang"
+        android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/message_content"
+            android:layout_width="265dp"
+            android:layout_height="27dp"
+            android:ellipsize="end"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            android:singleLine="true"
+            android:text="[23条]宁波工程学院：每日健康采集：各位同学，欢迎返校复学。"
+            android:textSize="11dp"
+            app:layout_constraintStart_toStartOf="@id/contacts_id"
+            app:layout_constraintTop_toBottomOf="@id/contacts_id" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="72dp"
+        android:layout_height="28dp"
+        android:paddingLeft="25dp"
+        android:paddingTop="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="10dp"
+        android:text="上午9:24"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@id/contacts_id"
+        app:layout_constraintTop_toTopOf="@id/contacts_id" />
+
+    <ImageView
+        android:id="@+id/news"
+        android:layout_width="42dp"
+        android:layout_height="27dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingRight="5dp"
+        android:paddingLeft="20sp"
+        app:layout_constraintStart_toEndOf="@+id/message_content"
+        app:layout_constraintTop_toBottomOf="@+id/time"
+        android:src="@drawable/ic_news"/>
+
+
+    <View
+        android:layout_width="333dp"
+        android:layout_height="0.7dp"
+        android:background="#E6E6FA"
+        app:layout_constraintStart_toStartOf="@+id/message_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

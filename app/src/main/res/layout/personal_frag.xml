@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    >
+
+    <include
+        android:id="@+id/id"
+        layout="@layout/id_item"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/aline"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        app:layout_constraintStart_toStartOf="@id/id"
+        app:layout_constraintTop_toBottomOf="@id/id" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="#ffffff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/aline">
+
+        <ImageView
+            android:id="@+id/function_pay"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:padding="4dp"
+            android:src="@drawable/ic_pay"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/discovery__tab"
+            android:layout_width="260dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:ellipsize="end"
+            android:paddingLeft="10dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="5dp"
+            android:singleLine="true"
+            android:text="支付"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/function_pay"
+            app:layout_constraintTop_toTopOf="@id/function_pay" />
+
+        <ImageView
+            android:id="@+id/discovery_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintStart_toEndOf="@id/discovery__tab"
+            app:layout_constraintTop_toTopOf="@id/discovery__tab" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:padding="2dp"
+            android:src="@drawable/ic_goto"
+            app:layout_constraintStart_toEndOf="@id/discovery_image"
+            app:layout_constraintTop_toTopOf="@id/discovery_image" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:id="@+id/aline1"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        app:layout_constraintStart_toStartOf="@id/pay"
+        app:layout_constraintTop_toBottomOf="@id/pay" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="#ffffff"
+        android:id="@+id/collect"
+        app:layout_constraintStart_toStartOf="@id/aline1"
+        app:layout_constraintTop_toBottomOf="@id/aline1">
+
+        <ImageView
+            android:id="@+id/function_collect"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:padding="4dp"
+            android:src="@drawable/ic_collect"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/discovery__tab1"
+            android:layout_width="260dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:ellipsize="end"
+            android:paddingLeft="10dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="5dp"
+            android:singleLine="true"
+            android:text="收藏"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/function_collect"
+            app:layout_constraintTop_toTopOf="@id/function_collect" />
+
+        <ImageView
+            android:id="@+id/discovery_image1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintStart_toEndOf="@id/discovery__tab1"
+            app:layout_constraintTop_toTopOf="@id/discovery__tab1"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:padding="2dp"
+            android:src="@drawable/ic_goto"
+            app:layout_constraintStart_toEndOf="@id/discovery_image1"
+            app:layout_constraintTop_toTopOf="@id/discovery_image1" />
+
+        <View
+            android:layout_width="333dp"
+            android:layout_height="0.7dp"
+            android:background="#E6E6FA"
+            app:layout_constraintStart_toStartOf="@id/discovery__tab1"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:id="@+id/photo_album"
+        android:background="#ffffff"
+        app:layout_constraintStart_toStartOf="@id/collect"
+        app:layout_constraintTop_toBottomOf="@id/collect">
+
+        <ImageView
+            android:id="@+id/function_photo_album"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:padding="4dp"
+            android:src="@drawable/ic_photo_album"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/discovery__tab2"
+            android:layout_width="260dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:ellipsize="end"
+            android:paddingLeft="10dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="5dp"
+            android:singleLine="true"
+            android:text="相册"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/function_photo_album"
+            app:layout_constraintTop_toTopOf="@id/function_photo_album" />
+
+        <ImageView
+            android:id="@+id/discovery_image2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintStart_toEndOf="@id/discovery__tab2"
+            app:layout_constraintTop_toTopOf="@id/discovery__tab2"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:padding="2dp"
+            android:src="@drawable/ic_goto"
+            app:layout_constraintStart_toEndOf="@id/discovery_image2"
+            app:layout_constraintTop_toTopOf="@id/discovery_image2" />
+
+        <View
+            android:layout_width="333dp"
+            android:layout_height="0.7dp"
+            android:background="#E6E6FA"
+            app:layout_constraintStart_toStartOf="@id/discovery__tab2"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="#ffffff"
+        android:id="@+id/card"
+        app:layout_constraintStart_toStartOf="@id/photo_album"
+        app:layout_constraintTop_toBottomOf="@id/photo_album">
+
+        <ImageView
+            android:id="@+id/function_card"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:padding="4dp"
+            android:src="@drawable/ic_card"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/discovery__tab3"
+            android:layout_width="260dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:ellipsize="end"
+            android:paddingLeft="10dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="5dp"
+            android:singleLine="true"
+            android:text="卡包"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/function_card"
+            app:layout_constraintTop_toTopOf="@id/function_card" />
+
+        <ImageView
+            android:id="@+id/discovery_image3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintStart_toEndOf="@id/discovery__tab3"
+            app:layout_constraintTop_toTopOf="@id/discovery__tab3"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:padding="2dp"
+            android:src="@drawable/ic_goto"
+            app:layout_constraintStart_toEndOf="@id/discovery_image3"
+            app:layout_constraintTop_toTopOf="@id/discovery_image3" />
+
+        <View
+            android:layout_width="333dp"
+            android:layout_height="0.7dp"
+            android:background="#E6E6FA"
+            app:layout_constraintStart_toStartOf="@id/discovery__tab3"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="#ffffff"
+        android:id="@+id/emoji"
+        app:layout_constraintStart_toStartOf="@id/card"
+        app:layout_constraintTop_toBottomOf="@id/card">
+
+        <ImageView
+            android:id="@+id/function_emoji"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:padding="4dp"
+            android:src="@drawable/ic_emoji"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/discovery__tab4"
+            android:layout_width="260dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:ellipsize="end"
+            android:paddingLeft="10dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="5dp"
+            android:singleLine="true"
+            android:text="表情"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/function_emoji"
+            app:layout_constraintTop_toTopOf="@id/function_emoji" />
+
+        <ImageView
+            android:id="@+id/discovery_image4"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintStart_toEndOf="@id/discovery__tab4"
+            app:layout_constraintTop_toTopOf="@id/discovery__tab4"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:padding="2dp"
+            android:src="@drawable/ic_goto"
+            app:layout_constraintStart_toEndOf="@id/discovery_image4"
+            app:layout_constraintTop_toTopOf="@id/discovery_image4" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/aline2"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        app:layout_constraintStart_toStartOf="@id/emoji"
+        app:layout_constraintTop_toBottomOf="@id/emoji" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="#ffffff"
+        android:id="@+id/set"
+        app:layout_constraintStart_toStartOf="@id/aline2"
+        app:layout_constraintTop_toBottomOf="@id/aline2">
+
+        <ImageView
+            android:id="@+id/function_set"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:padding="4dp"
+            android:src="@drawable/ic_set"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/discovery__tab5"
+            android:layout_width="260dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:ellipsize="end"
+            android:paddingLeft="10dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="5dp"
+            android:singleLine="true"
+            android:text="表情"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/function_set"
+            app:layout_constraintTop_toTopOf="@id/function_set" />
+
+        <ImageView
+            android:id="@+id/discovery_image5"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintStart_toEndOf="@id/discovery__tab5"
+            app:layout_constraintTop_toTopOf="@id/discovery__tab5"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:padding="2dp"
+            android:src="@drawable/ic_goto"
+            app:layout_constraintStart_toEndOf="@id/discovery_image5"
+            app:layout_constraintTop_toTopOf="@id/discovery_image5" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

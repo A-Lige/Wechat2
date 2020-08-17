@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/menu_layout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:background="#F8F8FF"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintVertical_weight="1">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/message_btn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="微信"-->
+<!--            android:gravity="center"-->
+<!--            android:textSize="9sp"-->
+<!--            android:drawableTop="@drawable/ic_message"-->
+<!--            android:paddingTop="2dp"-->
+<!--            android:paddingBottom="1dp"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/contacts_btn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="通讯录"-->
+<!--            android:gravity="center"-->
+<!--            android:textSize="9sp"-->
+<!--            android:drawableTop="@drawable/ic_contacts"-->
+
+<!--            android:paddingBottom="1dp"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/discovery_btn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="发现"-->
+<!--            android:gravity="center"-->
+<!--            android:textSize="9sp"-->
+<!--            android:drawableTop="@drawable/ic_dicovery"-->
+<!--            android:paddingTop="2dp"-->
+<!--            android:paddingBottom="1dp"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/personal_btn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="我"-->
+<!--            android:gravity="center"-->
+<!--            android:textSize="9sp"-->
+<!--            android:drawableTop="@drawable/ic_personal"-->
+
+<!--            android:paddingBottom="1dp"/>-->
+
+
+<!--    </LinearLayout>-->
+
+<!--    <FrameLayout-->
+<!--        android:id="@+id/qwq_layout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/menu_layout"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.0"-->
+<!--        app:layout_constraintVertical_weight="1">-->
+<!--    </FrameLayout>-->
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tab_layout" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#F8F8FF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tabIndicatorHeight="0dp"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="#05c160"
+        app:tabTextColor="#000000" />
+</androidx.constraintlayout.widget.ConstraintLayout>
