@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/sousuo"
+        android:icon="@drawable/ic_search"
+        android:title="搜索"
+        app:showAsAction="always"/>
+
+
+    <item
+        android:title=""
+        app:showAsAction="always"
+        android:icon="@drawable/ic_set">
+        <menu>
+            <item
+                android:id="@+id/faqiqunliao"
+                android:icon="@drawable/ic_qunliao"
+                android:title="发起群聊" />
+            <item
+                android:id="@+id/addfriends"
+                android:icon="@drawable/ic_addfriends"
+                android:title="添加朋友"/>
+            <item
+                android:id="@+id/saosao"
+                android:icon="@drawable/ic_saoyisao"
+                android:title="扫一扫"/>
+            <item
+                android:id="@+id/soufuk"
+                android:icon="@drawable/ic_money"
+                android:title="收付款"/>
+            <item
+                android:id="@+id/fankui"
+                android:icon="@drawable/ic_fankui"
+                android:title="帮助与反馈"/>
+
+        </menu>
+    </item>
+</menu>

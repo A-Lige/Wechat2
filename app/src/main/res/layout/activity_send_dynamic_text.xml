@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Send_dynamic"
+    android:background="#ffffff">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_send"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/backtocircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_black"
+            android:layout_gravity="left"/>
+        <TextView
+            android:id="@+id/title_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="发表文字"
+            android:layout_margin="5dp"
+            android:textSize="17sp"
+            android:textColor="#000000"
+            android:layout_gravity="left"
+            android:visibility="visible"/>
+        <Button
+            android:id="@+id/send_btn"
+            android:layout_width="55dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right|top"
+            android:layout_margin="20dp"
+            android:text="发表"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:background="@drawable/send_btn_clicked" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@null"
+        android:gravity="top"
+        android:hint="这一刻的想法..."
+        android:maxLines="4"
+        android:paddingTop="10dp"
+        android:textColor="#000000"
+        android:textColorHint="#C0C0C0"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_send" />
+
+    <View
+        android:id="@+id/picture"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="120dp"
+        android:background="#E6E6FA"
+        app:layout_constraintStart_toStartOf="@+id/edit_text"
+        app:layout_constraintTop_toBottomOf="@id/edit_text" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="#ffffff"
+        android:id="@+id/collect"
+        app:layout_constraintStart_toStartOf="@id/picture"
+        app:layout_constraintTop_toBottomOf="@id/picture"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp">
+
+        <ImageView
+            android:id="@+id/function_collect"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:padding="4dp"
+            android:src="@drawable/ic_position"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/discovery__tab1"
+            android:layout_width="260dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:ellipsize="end"
+            android:paddingLeft="10dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="5dp"
+            android:singleLine="true"
+            android:text="所在位置"
+            android:textColor="#515151"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/function_collect"
+            app:layout_constraintTop_toTopOf="@id/function_collect" />
+
+        <ImageView
+            android:id="@+id/discovery_image1"
+            android:layout_width="12dp"
+            android:layout_height="13dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginRight="13dp"
+            android:src="@drawable/ic_goto"
+            app:layout_constraintBottom_toBottomOf="@+id/discovery__tab1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/discovery__tab1" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="308dp"
+            android:layout_height="0.7dp"
+            android:background="#E6E6FA"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/discovery__tab1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:id="@+id/photo_album"
+        android:background="#ffffff"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintStart_toStartOf="@id/collect"
+        app:layout_constraintTop_toBottomOf="@id/collect">
+
+        <ImageView
+            android:id="@+id/function_photo_album"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:padding="4dp"
+            android:src="@drawable/ic_remind"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/discovery__tab2"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:ellipsize="end"
+            android:paddingLeft="10dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="5dp"
+            android:singleLine="true"
+            android:text="提醒谁看"
+            android:textColor="#515151"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/function_photo_album"
+            app:layout_constraintTop_toTopOf="@id/function_photo_album" />
+
+        <TextView
+            android:id="@+id/discovery_image2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:text="ndwchiowejvieo de2fu 9"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/discovery__tab2"
+            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@id/discovery__tab2" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="12dp"
+            android:layout_height="13dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginRight="13dp"
+            android:src="@drawable/ic_goto"
+            app:layout_constraintBottom_toBottomOf="@+id/discovery__tab2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/discovery__tab2" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="333dp"
+            android:layout_height="0.7dp"
+            android:background="#E6E6FA"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/discovery__tab2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:id="@+id/who_can_see"
+        android:background="#ffffff"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintStart_toStartOf="@id/photo_album"
+        app:layout_constraintTop_toBottomOf="@id/photo_album">
+
+        <ImageView
+            android:id="@+id/function_who_can_see"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:padding="4dp"
+            android:src="@drawable/ic_who_can_see"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/discovery__tab3"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:ellipsize="end"
+            android:paddingLeft="10dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="5dp"
+            android:singleLine="true"
+            android:text="谁可以看"
+            android:textColor="#515151"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/function_who_can_see"
+            app:layout_constraintTop_toTopOf="@id/function_who_can_see" />
+
+        <TextView
+            android:id="@+id/discovery_image3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:text="小米,丽丽,阿树,张三,李四"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/discovery__tab3"
+            app:layout_constraintEnd_toStartOf="@+id/imageView3"
+            app:layout_constraintTop_toTopOf="@id/discovery__tab3" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="12dp"
+            android:layout_height="13dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginRight="13dp"
+            android:src="@drawable/ic_goto"
+            app:layout_constraintBottom_toBottomOf="@+id/discovery__tab3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/discovery__tab3" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="333dp"
+            android:layout_height="0.7dp"
+            android:background="#E6E6FA"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/discovery__tab3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
