@@ -1,14 +1,17 @@
 package com.example.wechat;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -31,12 +34,19 @@ public class MainActivity extends AppCompatActivity {
     List<String> list=new ArrayList<>();
     MyFragmentAdapter myFragmentAdapter;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+//        getWindow().setStatusBarColor(0xff24cf5f);
         setContentView(R.layout.activity_main);
         initView();
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+//
+//            WindowManager.LayoutParams localLayoutParams = getWindow().getAttributes();
+//            localLayoutParams.flags = (WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | localLayoutParams.flags);
+//        }
     }
     private void initView(){
         fglist.add(new MessageFragment());

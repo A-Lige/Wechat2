@@ -6,55 +6,66 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/menu"
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:id="@+id/menu"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        android:background="#F8F8FF">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/weixin"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="15dp"-->
+<!--            android:text="微信"-->
+<!--            android:textColor="#454545"-->
+<!--            android:textSize="18sp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/search"-->
+<!--            android:layout_width="25dp"-->
+<!--            android:layout_height="25dp"-->
+<!--            android:layout_marginStart="250dp"-->
+<!--            android:layout_marginLeft="250dp"-->
+<!--            android:src="@drawable/ic_search"-->
+<!--            app:layout_constraintStart_toEndOf="@id/weixin"-->
+<!--            app:layout_constraintTop_toTopOf="@id/weixin" />-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="25dp"-->
+<!--            android:layout_height="25dp"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:layout_marginLeft="20dp"-->
+<!--            android:padding="1dp"-->
+<!--            android:src="@drawable/ic_menu"-->
+<!--            app:layout_constraintStart_toEndOf="@id/search"-->
+<!--            app:layout_constraintTop_toTopOf="@id/search" />-->
+
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_mes"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="#F8F8FF">
-
-        <TextView
-            android:id="@+id/weixin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="微信"
-            android:textColor="#454545"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/search"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginStart="250dp"
-            android:layout_marginLeft="250dp"
-            android:src="@drawable/ic_search"
-            app:layout_constraintStart_toEndOf="@id/weixin"
-            app:layout_constraintTop_toTopOf="@id/weixin" />
-
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginLeft="20dp"
-            android:padding="1dp"
-            android:src="@drawable/ic_menu"
-            app:layout_constraintStart_toEndOf="@id/search"
-            app:layout_constraintTop_toTopOf="@id/search" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+        app:title="微信"
+        app:titleTextColor="#000000"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/message_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="@id/menu"
-        app:layout_constraintTop_toBottomOf="@+id/menu"
+        app:layout_constraintStart_toStartOf="@id/toolbar_mes"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_mes"
         app:layout_constraintBottom_toBottomOf="parent"
         />
 

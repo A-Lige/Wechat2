@@ -1,22 +1,21 @@
 package com.example.wechat;
 
-import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowId;
+import android.view.WindowManager;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
-import java.util.List;
+import static com.example.wechat.RoundRectImageView.getRoundBitmapByShader;
 
 public class PersonalFragment extends Fragment {
     @Nullable
@@ -51,6 +50,11 @@ public class PersonalFragment extends Fragment {
 
         AllitemPersonal all=new AllitemPersonal(new ID(R.drawable.ic_tx5,"Lisa","微信号：dwoqy11"),getFunction());
         recyclerView.setAdapter(new MyRecyclerAdapter(all));*/
+        ImageView iv = view.findViewById(R.id.id_tx);
+        //图片设置为圆角
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.pytx3);
+        Bitmap outBitmap =getRoundBitmapByShader(bitmap, 500,500,50, 0);
+        iv.setImageBitmap(outBitmap);
         return view;
     }
     /*

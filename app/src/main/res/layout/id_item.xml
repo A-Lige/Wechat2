@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="140dp"
+    android:layout_height="170dp"
     android:orientation="vertical"
     android:background="#ffffff">
 
@@ -16,7 +16,7 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="40dp"
         android:layout_marginBottom="30dp"
-        android:src="@drawable/ic_tx6"
+        android:src="@drawable/pytx3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

@@ -5,14 +5,87 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f5f5f5"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true"
     >
 
-    <include
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/id"
-        layout="@layout/id_item"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:background="#ffffff"
+        android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:fitsSystemWindows="true">
+
+        <ImageView
+            android:id="@+id/id_tx"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="30dp"
+            android:src="@drawable/pytx3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/id_name"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:padding="8dp"
+            android:text="不知道取啥名"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@id/id_tx"
+            app:layout_constraintTop_toTopOf="@id/id_tx" />
+
+        <TextView
+            android:id="@+id/id_number"
+            android:layout_width="230dp"
+            android:layout_height="30dp"
+            android:gravity="left|center"
+            android:paddingLeft="9dp"
+            android:text="微信号：bl00314"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/id_name"
+            app:layout_constraintTop_toBottomOf="@id/id_name" />
+
+        <ImageView
+            android:id="@+id/code"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_code"
+            app:layout_constraintBottom_toBottomOf="@id/id_number"
+            app:layout_constraintStart_toEndOf="@id/id_number" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_goto"
+            app:layout_constraintBottom_toBottomOf="@id/code"
+            app:layout_constraintStart_toEndOf="@id/code" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="252dp"
+            android:layout_marginLeft="252dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_creame"
+            app:layout_constraintBottom_toTopOf="@+id/id_name"
+            app:layout_constraintStart_toStartOf="@+id/id_name" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <View
         android:id="@+id/aline"
@@ -372,7 +445,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
             android:padding="4dp"
-            android:src="@drawable/ic_set"
+            android:src="@drawable/ic_setting"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -388,7 +461,7 @@
             android:paddingTop="6dp"
             android:paddingBottom="5dp"
             android:singleLine="true"
-            android:text="表情"
+            android:text="设置"
             android:textColor="#000000"
             android:textSize="14sp"
             app:layout_constraintStart_toEndOf="@id/function_set"

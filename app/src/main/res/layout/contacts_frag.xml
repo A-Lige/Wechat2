@@ -6,53 +6,65 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/menu1"
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:id="@+id/menu1"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        android:background="#F8F8FF">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tongxl"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="15dp"-->
+<!--            android:text="通讯录"-->
+<!--            android:textColor="#454545"-->
+<!--            android:textSize="18sp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/search1"-->
+<!--            android:layout_width="25dp"-->
+<!--            android:layout_height="25dp"-->
+<!--            android:layout_marginStart="230dp"-->
+<!--            android:layout_marginLeft="230dp"-->
+<!--            android:src="@drawable/ic_search"-->
+<!--            app:layout_constraintStart_toEndOf="@id/tongxl"-->
+<!--            app:layout_constraintTop_toTopOf="@id/tongxl" />-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="25dp"-->
+<!--            android:layout_height="25dp"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:layout_marginLeft="20dp"-->
+<!--            android:padding="1dp"-->
+<!--            android:src="@drawable/ic_menu"-->
+<!--            app:layout_constraintStart_toEndOf="@id/search1"-->
+<!--            app:layout_constraintTop_toTopOf="@id/search1" />-->
+
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_con"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="#F8F8FF">
-
-        <TextView
-            android:id="@+id/tongxl"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="通讯录"
-            android:textColor="#454545"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/search1"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginStart="230dp"
-            android:layout_marginLeft="230dp"
-            android:src="@drawable/ic_search"
-            app:layout_constraintStart_toEndOf="@id/tongxl"
-            app:layout_constraintTop_toTopOf="@id/tongxl" />
-
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginLeft="20dp"
-            android:padding="1dp"
-            android:src="@drawable/ic_menu"
-            app:layout_constraintStart_toEndOf="@id/search1"
-            app:layout_constraintTop_toTopOf="@id/search1" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+        app:titleTextColor="#000000"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/contacts_recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/menu1" />
+        app:layout_constraintTop_toBottomOf="@id/toolbar_con" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#ffffff">
@@ -18,29 +19,43 @@
     <TextView
         android:id="@+id/pyq_friends_id"
         android:layout_width="wrap_content"
-        android:layout_height="20dp"
+        android:layout_height="25dp"
         android:layout_marginLeft="10dp"
         android:gravity="center"
         app:layout_constraintTop_toTopOf="@id/pyq_friends_tx"
         app:layout_constraintStart_toEndOf="@id/pyq_friends_tx"
         android:text="小耳朵"
         android:textSize="17sp"
-        android:textColor="	#4682B4"
+        android:textColor="@color/pyq_dark"
         />
 
-    <TextView
+    <RelativeLayout
         android:id="@+id/pyq_friends_text"
-        android:layout_width="304dp"
+        android:layout_width="303dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="4dp"
-        android:maxEms="20"
-        android:maxLines="6"
-        android:singleLine="false"
-        android:text="你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀你好呀"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@id/pyq_friends_id"
-        app:layout_constraintTop_toBottomOf="@id/pyq_friends_id" />
+        app:layout_constraintStart_toEndOf="@+id/pyq_friends_tx"
+        app:layout_constraintTop_toBottomOf="@id/pyq_friends_id">
+
+        <com.example.wechat.ExpandTextView
+            android:id="@+id/friendscircle_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            app:descText="http://blog.csdn.net/cj_286/article/details/53021959。中间的圆形头像和光环波形讲解请看:http://blog.csdn.net/cj_286/article/details/52839036。周围的气泡布局，因为的布局RatioLayout是继承自ViewGroup，所以布局layout就可以根据自己的需求来布局其子view，view.layout(int l,int t,int r,int b);用于布局子view在父ViewGroup中的位置（相对于父容器），所以在RatioLayout中计算所有子view的left，top，right，bottom。那么头像的周围的气泡view是如何计算它的left，top，right，bottom的呢，这些气泡view是坐落在头像外围的圆环上，只要知道这个圆环的半径，然后再根据气泡的个数，计算每个气泡之间的角度，半径加角度就可以计算每个气泡坐落的位置。"
+            app:descColor="#000"
+            app:descSize="16"
+            app:descZoomRows="5"
+            app:expandTextColor="@color/pyq_dark"
+            app:expandTextSize="16"
+            app:expandTextClose="收起"
+            app:expandTextOpen="展开"
+            android:visibility="visible">
+        </com.example.wechat.ExpandTextView>
+    </RelativeLayout>
+
 
     <GridLayout
         android:id="@+id/pyq_friends_imageView"
@@ -48,7 +63,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@id/pyq_friends_text"
         app:layout_constraintTop_toBottomOf="@id/pyq_friends_text"
-        >
+        tools:ignore="NotSibling">
 
     <ImageView
         android:id="@+id/pyq_friends_image"
@@ -65,7 +80,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="昨天"
-        android:textSize="10sp"
+        android:textSize="11sp"
         app:layout_constraintStart_toStartOf="@id/pyq_friends_imageView"
         app:layout_constraintTop_toBottomOf="@id/pyq_friends_imageView" />
 
